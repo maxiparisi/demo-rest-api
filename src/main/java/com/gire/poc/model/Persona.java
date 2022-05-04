@@ -1,27 +1,34 @@
-package com.example.maxi.demo.model;
+package com.gire.poc.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "personas")
 public class Persona {
 
-	private Long id;
+	@Id
+	private String id;
+	
+	@Indexed(unique=true)
+	private String loginName;
+	
 	private String nombre;
 	private String apellido;
 	private Integer dni;
 	private String tipoDni;
 	
-	public Persona(Long id, String nombre, String apellido, Integer dni, String tipoDni) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.dni = dni;
-		this.tipoDni = tipoDni;
-	}
-	
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
+	}
+	public String getLoginName() {
+		return loginName;
+	}
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
 	}
 	public String getNombre() {
 		return nombre;

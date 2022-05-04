@@ -1,4 +1,4 @@
-package com.example.maxi.demo;
+package com.gire.poc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

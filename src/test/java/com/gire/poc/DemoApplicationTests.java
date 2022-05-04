@@ -1,4 +1,4 @@
-package com.example.maxi.demo;
+package com.gire.poc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
